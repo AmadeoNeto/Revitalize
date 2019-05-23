@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout        xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_height= "wrap_content"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:gravity= "center_vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="Saúde e Bem Estar"
+        android:textSize="36sp" />
+
+    <Button
+        android:id="@+id/alimentacaoButton"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="Alimentação" />
+
+    <Button
+        android:id="@+id/imcButton"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="IMC" />
+
+
+</LinearLayout>
