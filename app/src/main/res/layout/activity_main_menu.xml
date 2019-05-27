@@ -1,37 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout        xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:layout_height= "wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="16dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
     android:orientation="vertical"
-    android:gravity= "center_vertical" >
+    android:padding="16dp">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_gravity="center"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:text="Saúde e Bem Estar"
-        android:textSize="36sp" />
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/alimentacaoButton"
         android:layout_width="125dp"
         android:layout_height="125dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="8dp"
         android:gravity="center"
-        android:text="Alimentação" />
+        android:text="Alimentação"
+        app:layout_constraintEnd_toStartOf="@+id/imcButton"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <Button
         android:id="@+id/imcButton"
         android:layout_width="125dp"
         android:layout_height="125dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="24dp"
         android:gravity="center"
-        android:text="IMC" />
+        android:text="IMC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
+    <Button
+        android:id="@+id/aguaButton"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Água"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alimentacaoButton" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/desafiosButton"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="Desafios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/aguaButton"
+        app:layout_constraintTop_toBottomOf="@+id/imcButton" />
+
+</android.support.constraint.ConstraintLayout>
