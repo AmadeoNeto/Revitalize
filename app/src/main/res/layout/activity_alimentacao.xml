@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<android.support.constraint.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Alimentacao">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="Faça as refeições com calma \n  Ajuda na digestão dos alimentos no organismo\n \n   Mastigue bem os alimentos \n  Ajuda no processo digestivo e auxilia na saciedade fisiológica (verdadeira) \n \n   Não ingira líquidos junto com as refeições \n O líquido faz com que você não mastigue bem os alimentos e atrapalha o processo digestivo. O ideal é ingerir líquidos antes ou depois das refeições; \n \n Horários para as refeições \n Ter um horário faz com que nosso organismo mantenha um ritmo, com estabilidade nutricional e hormonal. Além disso, é importante se alimentar a cada 3 horas pois isso mantêm a fome e a voracidade sobre controle; \n \n Consuma alimentos integrais \n Eles contém vários nutriente e auxiliam nos níveis de açúcar no sangue, além de possuir fibras benéficas ao intestino e auxiliar no controle do colesterol e da saciedade; \n \n Consuma frutas e hortaliças\n Pois elas são ótimas fontes de fibras, vitaminas e minerais. \n \n Evite alimentos refinados \n  Os alimentos considerados brancos (pão, açúcar, trigo, arroz) passam por processos químicos que favorecem o crescimento das bactérias patogênicas (ruins) e desequilibram nossa flora intestinal. \n \n Ingira líquido \n A ingestão de líquidos durante o dia faz com que nosso corpo se mantenha bem hidratado e ajude o organismo a transportar os nutrientes que precisamos. \n \n Evite os industrializados \n  Estes produtos contêm inúmeras substâncias químicas que não são reconhecidas pelo nosso organismo. O consumo desses alimentos em quantidade excessiva demanda trabalho do fígado e dos rins. Alguns produtos com potencial efeito cancerígeno e podem comprometer o sistema imunológico e ocasionar processos alérgicos."
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="16dp"
+        android:text="Alimentação"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
+</ScrollView>
