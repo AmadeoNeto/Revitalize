@@ -18,7 +18,7 @@ class Agua : AppCompatActivity() {
         val button200 = findViewById<Button>(R.id.button200)
         val button500 = findViewById<Button>(R.id.button500)
         val progress = findViewById<ProgressBar>(R.id.waterBar)
-        val text = findViewById<TextView>(R.id.waterText)
+        val waterText = findViewById<TextView>(R.id.waterText)
 
         button150.setOnClickListener {
             progress.progress += 150

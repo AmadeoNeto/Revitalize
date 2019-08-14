@@ -14,7 +14,7 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/checkBox"
         app:layout_constraintEnd_toEndOf="@+id/checkBox"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/checkBox"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,7 +25,7 @@
         android:text="Caminhe por meia hora uma vez por semana durante dois meses"
         app:layout_constraintBottom_toTopOf="@+id/checkBox2"
         app:layout_constraintEnd_toEndOf="@+id/checkBox2"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/checkBox2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -36,7 +36,7 @@
         android:text="Coma pelo menos 2 fruta por dia durante uma semana"
         app:layout_constraintBottom_toTopOf="@+id/checkBox5"
         app:layout_constraintEnd_toEndOf="@+id/checkBox5"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/checkBox5"
         app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
@@ -44,7 +44,7 @@
         android:id="@+id/checkBox3"
         android:layout_width="289dp"
         android:layout_height="36dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox4"
@@ -57,7 +57,7 @@
         android:text="Fique uma semana sem beber bebidas industrializadas"
         app:layout_constraintBottom_toTopOf="@+id/checkBox3"
         app:layout_constraintEnd_toEndOf="@+id/checkBox3"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/checkBox3"
         app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
 
@@ -68,7 +68,7 @@
         android:text="Tome ao menos dois litros d'água diariamente"
         app:layout_constraintBottom_toTopOf="@+id/checkBox4"
         app:layout_constraintEnd_toEndOf="@+id/checkBox4"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/checkBox4"
         app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
 

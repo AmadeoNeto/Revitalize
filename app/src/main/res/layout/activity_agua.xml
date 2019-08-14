@@ -11,50 +11,36 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:layout_gravity="center"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="140dp"
         android:text="Hidratação"
-        android:textSize="36sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="36sp" />
 
     <ProgressBar
         android:id="@+id/waterBar"
         style="@android:style/Widget.ProgressBar.Horizontal"
-        android:layout_width="355dp"
+        android:layout_width="match_parent"
         android:layout_height="39dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="76dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="23dp"
         android:max="2000"
-        android:progressTint="#00BCD4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:progressTint="#00BCD4" />
 
     <TextView
         android:id="@+id/waterText"
         android:layout_width="231dp"
         android:layout_height="43dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="44dp"
+        android:layout_gravity="center_horizontal"
         android:text="0ml/2000ml"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button200"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/waterBar"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_marginBottom="32dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
@@ -64,11 +50,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="1"
-            android:text="+150 ml"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button200"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:text="+150 ml" />
 
 
         <Button
@@ -77,12 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="+200 ml"
-            app:layout_constraintBottom_toBottomOf="@+id/button150"
-            app:layout_constraintEnd_toStartOf="@+id/button500"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button150"
-            app:layout_constraintTop_toTopOf="@+id/button150" />
+            android:text="+200 ml" />
 
         <Button
             android:id="@+id/button500"
@@ -91,12 +68,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="1"
-            android:text="+500 ml"
-            app:layout_constraintBottom_toBottomOf="@+id/button200"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button200"
-            app:layout_constraintTop_toTopOf="@+id/button200" />
+            android:text="+500 ml" />
     </LinearLayout>
 
 </LinearLayout>
