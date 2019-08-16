@@ -32,7 +32,7 @@ class MainMenu : AppCompatActivity() {
 
         challenges_btn.setOnClickListener {
 
-            val intent = Intent(this, Desafios::class.java)
+            val intent = Intent(this, DesafiosRV::class.java)
 
             startActivity(intent)
         }

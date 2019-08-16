@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Alimentacao"></activity>
+        <activity android:name=".DesafiosRV"></activity>
+        <activity android:name=".Alimentacao" />
         <activity android:name=".Desafios" />
         <activity android:name=".Agua" />
         <activity android:name=".MainActivity">
