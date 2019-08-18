@@ -3,29 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/desafioDescription"
-        android:layout_width="198dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
+        android:layout_width="208dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         android:text=" Correr é uma ótima forma de reduzir a glicose e para absorver a vitamina D "
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/desafioDescartar"
-        app:layout_constraintStart_toEndOf="@+id/desafioImage" />
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/desafioTitle"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/desafioImage"
+        app:layout_constraintTop_toBottomOf="@+id/desafioTitle" />
 
     <TextView
         android:id="@+id/desafioTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_width="208dp"
+        android:layout_height="35dp"
         android:layout_marginTop="16dp"
-        android:text="Correr 10km"
-        android:textSize="24sp"
+        android:layout_marginEnd="8dp"
+        android:text="Diminua o uso de açúcar refinado"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/desafioDescription"
-        app:layout_constraintStart_toEndOf="@+id/desafioImage"
+        app:layout_constraintEnd_toStartOf="@+id/desafioConcluir"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -33,10 +37,16 @@
         android:id="@+id/desafioImage"
         android:layout_width="77dp"
         android:layout_height="77dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/desafioTitle"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@tools:sample/avatars" />
 
     <CheckBox
@@ -44,22 +54,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/desafioDescription"
-        app:layout_constraintTop_toBottomOf="@+id/desafioConcluir" />
+        app:layout_constraintStart_toStartOf="@+id/desafioConcluir"
+        app:layout_constraintTop_toBottomOf="@+id/desafioConcluir"
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/desafioConcluir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/desafioTitle"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
