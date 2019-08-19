@@ -1,9 +1,9 @@
 package com.example.aluno.saudeebemestar
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import  android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 
 class MainMenu : AppCompatActivity() {
 
