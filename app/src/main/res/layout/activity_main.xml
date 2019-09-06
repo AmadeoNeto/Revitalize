@@ -4,23 +4,28 @@
     android:layout_width="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    android:gravity= "center_vertical" >
+    android:gravity= "center_vertical"
+    android:background="@drawable/interface_inicial">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="32dp"
-    android:text="Saúde e Bem Estar"
-        android:textSize="36sp" />
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/interface_inicial_text" />
 
-    <Button
+    <ImageButton
         android:id="@+id/startButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="119dp"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:text="Start" />
+        android:layout_marginTop="25dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/botao_inicial" />
 
 
 </LinearLayout>

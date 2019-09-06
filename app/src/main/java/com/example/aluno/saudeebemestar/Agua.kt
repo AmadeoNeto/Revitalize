@@ -1,7 +1,10 @@
 package com.example.aluno.saudeebemestar
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -14,28 +17,17 @@ class Agua : AppCompatActivity() {
         setContentView(R.layout.activity_agua)
 
         var value: Int = 0;
-        val button150 = findViewById<Button>(R.id.button150)
-        val button200 = findViewById<Button>(R.id.button200)
-        val button500 = findViewById<Button>(R.id.button500)
+        val editText = findViewById<EditText>(R.id.agua_edittext)
         val progress = findViewById<ProgressBar>(R.id.waterBar)
         val waterText = findViewById<TextView>(R.id.waterText)
 
-        button150.setOnClickListener {
-            progress.progress += 150
-            value+= 150
-            waterText.text = value.toString() + "ml/2000ml"
-        }
+        editText.addTextChangedListener(object : TextWatcher{
 
-        button200.setOnClickListener {
-            progress.progress += 200
-            value += 200
-            waterText.text = value.toString() + "ml/2000ml"
-        }
-
-        button500.setOnClickListener {
-            progress.progress += 500
-            value += 500
-            waterText.text = value.toString() + "ml/2000ml"
-        }
+            override fun afterTextChanged(s: Editable?) {
+                value+= editText.text.toString().toInt()
+                progress.progress += value
+                waterText.text = value.toString() + "ml/2000ml"
+            }
+        })
     }
 }
