@@ -19,10 +19,10 @@ class MainActivity : AppCompatActivity() {
 
         start_btn.setOnClickListener {
 
-            //            val intent = Intent(this, MainMenu::class.java)
-//            startActivity(intent)
+            val intent = Intent(this, MainMenu::class.java)
+            startActivity(intent)
 
-            TestFirebase()
+            //TestFirebase()
         }
     }
     fun TestFirebase(){

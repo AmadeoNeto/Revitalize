@@ -3,6 +3,7 @@ package com.example.aluno.saudeebemestar
 import android.os.Bundle
 import android.widget.Button
 import android.content.Intent
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
 class MainMenu : AppCompatActivity() {
@@ -11,10 +12,10 @@ class MainMenu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
 
-        val imc_btn = findViewById<Button>(R.id.imcButton)
-        val water_btn = findViewById<Button>(R.id.aguaButton)
-        val challenges_btn = findViewById<Button>(R.id.desafiosButton)
-        val alimentation_btn = findViewById<Button>(R.id.alimentacaoButton)
+        val imc_btn = findViewById<ImageButton>(R.id.imcButton)
+        val water_btn = findViewById<ImageButton>(R.id.aguaButton)
+        val challenges_btn = findViewById<ImageButton>(R.id.desafiosButton)
+        val alimentation_btn = findViewById<ImageButton>(R.id.alimentacaoButton)
 
         imc_btn.setOnClickListener {
 

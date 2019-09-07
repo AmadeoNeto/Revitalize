@@ -10,18 +10,15 @@
 
     <ImageView
         android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="293dp"
+        android:layout_height="58dp"
         android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
         android:layout_marginBottom="76dp"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:src="@drawable/text_agua"
-        android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/waterBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,13 +30,12 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="23dp"
-        android:layout_marginLeft="23dp"
         android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
         android:max="2000"
         android:progressTint="#00BCD4"
         app:layout_constraintBottom_toTopOf="@+id/waterText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -47,11 +43,9 @@
         android:id="@+id/waterText"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="32dp"
         android:text="0ml/2000ml"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/waterBar" />
@@ -62,28 +56,41 @@
         android:layout_width="65dp"
         android:layout_height="64dp"
         android:layout_marginStart="28dp"
-        android:layout_marginBottom="343dp"
+        android:layout_marginTop="43dp"
         android:src="@drawable/button_add"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/waterText"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/waterText" />
+        app:layout_constraintTop_toBottomOf="@+id/waterBar" />
 
     <EditText
         android:id="@+id/agua_edittext"
         android:layout_width="198dp"
-        android:layout_height="32dp"
+        android:layout_height="64dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="numberSigned"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/waterText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.226" />
+
+    <ImageView
+        android:id="@+id/water_checkbox"
+        android:layout_width="32dp"
+        android:layout_height="34dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/agua_edittext"
+        app:layout_constraintEnd_toEndOf="@+id/waterBar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/waterText"
+        app:layout_constraintTop_toBottomOf="@+id/waterBar"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_check_black_24dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

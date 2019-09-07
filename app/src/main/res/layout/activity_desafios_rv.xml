@@ -5,18 +5,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DesafiosRV">
+    tools:context=".DesafiosRV"
+    android:background="@drawable/desafios_fundo">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="297dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/desafios_title" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/desafioRV"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
