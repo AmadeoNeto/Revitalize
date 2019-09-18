@@ -7,7 +7,10 @@ import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.startActivity
+import com.google.android.gms.tasks.Task
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,15 +25,59 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MainMenu::class.java)
             startActivity(intent)
 
-            //TestFirebase()
+//            TestFirebase()
         }
     }
-    fun TestFirebase(){
-        val db = FirebaseFirestore.getInstance() //Firebase
-        val user = mapOf<String,Any>("nome" to "Joao", "idade" to 19) //FIREBASE
+    fun TestFirebase() {
 
-        db.collection("usuarios").document("jose20").set(user)
-                .addOnSuccessListener { Log.d("Bancodados","cadastrado com sucesso") }
-                .addOnFailureListener() { Log.d("Bancodados","Houve um erro no cadastramento") }
+        val db = FirebaseFirestore.getInstance()
+
+        val desafios = db.collection("desafios")
+        val lastDoc = consultar(db,"desafios", "alongar")
+                ?.addOnCompleteListener{document ->
+                    Log.d("Desafio", "Task completed")
+                }
+                ?.addOnSuccessListener { document ->
+                    if(document.exists())
+                        Log.d("Desafio", "Data: ${document.id}")
+                }
+                ?.addOnFailureListener{exception ->
+                    Log.d("Desafio","Exception: $exception")
+                }
+
+
+        /*val docRef = desafios.whereEqualTo("Random",(0..size).random())*/
+
+//        val cities = db.collection("cities")
+
+//        val data1 = hashMapOf(
+//                "name" to "San Francisco",
+//                "state" to "CA",
+//                "country" to "USA",
+//                "capital" to false,
+//                "population" to 860000,
+//                "regions" to listOf("west_coast", "norcal")
+//        )
+//        cities.document("SF").set(data1)
+//
+//        val TAG = "test";
+//        val docRef = db.collection("cities").document("SF")
+//        docRef.get().addOnSuccessListener { document ->
+//                    if (document != null) {
+//                        Log.d(TAG, "DocumentSnapshot data: ${document}")
+//                    } else {
+//                        Log.d(TAG, "No such document")
+//                    }
+//                }
+//                .addOnFailureListener { exception ->
+//                    Log.d(TAG, "get failed with ", exception)
+//                }
+    }
+
+    fun consultar(db : FirebaseFirestore,collection: String, document : String): Task<DocumentSnapshot>? {
+
+        val returnDocument = db.collection(collection).document(document).get()
+        return returnDocument
     }
 }
+
