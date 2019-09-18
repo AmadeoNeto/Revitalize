@@ -2,6 +2,7 @@ package com.example.aluno.saudeebemestar
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -27,13 +28,15 @@ class DesafiosRV : AppCompatActivity() {
         val task = GetDocuments(db,"Desafios", 4)
         var desafioList = mutableListOf<Desafio>()
 
-        Log.d("firestore", "RV: ${desafioRV == null}")
+        loading.visibility = View.VISIBLE
 
         task?.addOnSuccessListener {
             if(it != null) {
                 it.documents.forEach { doc ->
                     desafioList.add(GetDesafio(doc))
                     Log.d("firestore", "Data: ${GetDesafio(doc).desafioTitle}")
+
+                    loading.visibility = View.GONE
 
                     viewManager = LinearLayoutManager(this)
                     adapter = DesafioAdapter(desafioList)
@@ -86,6 +89,12 @@ class DesafiosRV : AppCompatActivity() {
 
     fun GetDesafio(doc : DocumentSnapshot) : Desafio{
 
-        return Desafio(doc.get("titulo").toString(), doc.get("descricao").toString(), R.drawable.sugar,false)
+        Log.d("firebase", doc.get("imageURL").toString())
+
+        return Desafio(
+                doc.get("titulo").toString(),
+                doc.get("descricao").toString(),
+                doc.get("imageURL").toString(),
+                false)
     }
 }

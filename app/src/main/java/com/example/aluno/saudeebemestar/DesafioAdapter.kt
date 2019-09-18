@@ -1,10 +1,14 @@
 package com.example.recyclerview
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.aluno.saudeebemestar.Desafio
+import com.example.aluno.saudeebemestar.GlideApp
 import com.example.aluno.saudeebemestar.R
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.desafio_layout.view.*
 
 class DesafioAdapter (private val desafioList : MutableList<Desafio>) : RecyclerView.Adapter<DesafioAdapter.DesafioViewHolder> (){
@@ -20,10 +24,14 @@ class DesafioAdapter (private val desafioList : MutableList<Desafio>) : Recycler
 
     override fun onBindViewHolder(holder: DesafioViewHolder, position: Int) {
 
+        val storage = FirebaseStorage.getInstance()
+        Log.d("firebase", "${storage.getReferenceFromUrl("https://firebasestorage.googleapis.com/v0/b/revitalize-1b7c2.appspot.com/o/Desafios%2Fabdominal.jpg?alt=media&token=7e4d995a-f2ea-47a6-8cee-41f7515bb075")}")
+
         holder.let{
-            it.image.setImageResource(desafioList[position].desafioImage)
             it.title.text = desafioList[position].desafioTitle
             it.description.text = desafioList[position].desafioDescriprion
+
+            GlideApp.with(it.itemView.context).load(desafioList[position].desafioImage).fitCenter().into(it.image)
         }
     }
 
